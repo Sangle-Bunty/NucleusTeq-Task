@@ -1,0 +1,21 @@
+1-Database - Used MySQL Database For Connectivity
+
+2-Set classpath
+	1) First i set jdbc driver classpath to envoirnment variables    
+
+3-Create Connection to database
+--> Connection con=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Measurements","root,"root");
+
+4-Here i create a query
+--> String q="create table length_converter(input_values int,MM double ,CM double, M double, KM double)";
+--> Statement stmt=con.createStatement(); //
+--> stmt.executeUpdate(q); // this statement update our query
+
+5-Process data // used while loop and update each row data
+
+6-Closed the connection:
+	con.close();
+
+7)method for display top 10 records from table
+// we used this query
+-->select * from length_converter limit 10;
